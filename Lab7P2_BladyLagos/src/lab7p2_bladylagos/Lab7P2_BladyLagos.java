@@ -16,6 +16,7 @@ public class Lab7P2_BladyLagos {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        new Spotify().setVisible(true);
     }
-    
+
 }
