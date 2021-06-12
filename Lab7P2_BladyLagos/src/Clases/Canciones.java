@@ -94,7 +94,7 @@ public class Canciones implements Serializable {
 
     @Override
     public String toString() {
-        return "Canciones{" + "nombre3=" + nombre3 + '}';
+        return nombre3;
     }
 
 }

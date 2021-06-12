@@ -23,8 +23,8 @@ public class Artista implements Serializable {
 
     private static final long SerialVersionUID = 777L;
 
-    public Artista() {
-    }
+//    public Artista() {
+//    }
 
     public Artista(String nombre1, String genero1, String disquera1, String alias1, String vos1) {
         this.nombre1 = nombre1;
@@ -82,8 +82,8 @@ public class Artista implements Serializable {
         this.Albumes = Albumes;
     }
 
-    public String toStringArtista() {
-        return "Artista " + "Nombre =" + nombre1 + ", Genero= " + genero1 + ", disquera= " + disquera1 + ", alias= " + alias1 + ", vos= " + vos1;
+    public String toString() {
+        return nombre1;
     }
 
 }

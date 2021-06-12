@@ -94,8 +94,8 @@ public class Albumes implements Serializable {
         this.ListaAlbumes = ListaAlbumes;
     }
 
-    public String toStringAlbumes() {
-        return "El Album Creado +" + nombre2 + "Con El Artista" + c + "Y fecha=" + fecha2 + ", genero=" + genero2 + ", formato=" + formato2 + ", alias=" + alias2;
+    public String toString() {
+        return nombre2;
     }// + ", ListaAlbumes=" + ListaAlbumes + '}'
 
 }
