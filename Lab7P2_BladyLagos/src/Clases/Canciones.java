@@ -5,11 +5,13 @@
  */
 package Clases;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Gerardo Lagos
  */
-public class Canciones {
+public class Canciones implements Serializable {
 
     private String nombre3;
     private String duracion3;//(en segundos)
@@ -18,6 +20,8 @@ public class Canciones {
     private String exclusiva3;//a Spotify (si o no)
     private String productor3;
     private String invitado3;//(si aplica)
+
+    private static final long SerialVersionUID = 777L;
 
     public Canciones() {
     }

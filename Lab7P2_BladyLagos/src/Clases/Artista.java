@@ -5,16 +5,23 @@
  */
 package Clases;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+
 /**
  *
  * @author Gerardo Lagos
  */
-public class Artista {
+public class Artista implements Serializable {
+
     private String nombre1;
     private String genero1;
     private String disquera1;
     private String alias1;
     private String vos1;
+    private ArrayList Albumes = new ArrayList();
+
+    private static final long SerialVersionUID = 777L;
 
     public Artista() {
     }
@@ -67,10 +74,16 @@ public class Artista {
         this.vos1 = vos1;
     }
 
-    @Override
-    public String toString() {
-        return "Artista{" + "nombre1=" + nombre1 + '}';
+    public ArrayList getAlbumes() {
+        return Albumes;
     }
-    
-    
+
+    public void setAlbumes(ArrayList Albumes) {
+        this.Albumes = Albumes;
+    }
+
+    public String toStringArtista() {
+        return "Artista " + "Nombre =" + nombre1 + ", Genero= " + genero1 + ", disquera= " + disquera1 + ", alias= " + alias1 + ", vos= " + vos1;
+    }
+
 }

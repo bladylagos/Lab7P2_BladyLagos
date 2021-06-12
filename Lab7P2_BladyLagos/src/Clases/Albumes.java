@@ -5,20 +5,26 @@
  */
 package Clases;
 
+import java.io.File;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Gerardo Lagos
  */
-public class Albumes {
+public class Albumes implements Serializable {
 
     private String nombre2;
     private String fecha2;
     private String genero2;
     private String formato2;//(digital o cd)
     private String alias2;//productor
+    Artista c;
+    File archivo;
     private ArrayList<Albumes> ListaAlbumes = new ArrayList();
+
+    private static final long SerialVersionUID = 777L;
 
     public Albumes() {
     }
@@ -29,6 +35,7 @@ public class Albumes {
         this.genero2 = genero2;
         this.formato2 = formato2;
         this.alias2 = alias2;
+
     }
 
     public String getNombre2() {
@@ -70,6 +77,14 @@ public class Albumes {
     public void setAlias2(String alias2) {
         this.alias2 = alias2;
     }
+//
+//    public Artista getC() {
+//        return c;
+//    }
+//
+//    public void setC(Artista c) {
+//        this.c = c;
+//    }
 
     public ArrayList<Albumes> getListaAlbumes() {
         return ListaAlbumes;
@@ -79,9 +94,8 @@ public class Albumes {
         this.ListaAlbumes = ListaAlbumes;
     }
 
-    @Override
-    public String toString() {
-        return "Albumes{" + "nombre2=" + nombre2 + '}';
-    }
-    
+    public String toStringAlbumes() {
+        return "El Album Creado +" + nombre2 + "Con El Artista" + c + "Y fecha=" + fecha2 + ", genero=" + genero2 + ", formato=" + formato2 + ", alias=" + alias2;
+    }// + ", ListaAlbumes=" + ListaAlbumes + '}'
+
 }
